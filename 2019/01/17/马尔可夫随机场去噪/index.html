@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    HuiXinsNote
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="PoetryScience">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">PoetryScience</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/iRobots/">iRobots</a></li><li><a class="category-link" href="/categories/写作/">写作</a></li><li><a class="category-link" href="/categories/学习笔记/">学习笔记</a></li><li><a class="category-link" href="/categories/技术笔记/">技术笔记</a></li><li><a class="category-link" href="/categories/文献阅读/">文献阅读</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/miccall" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://res.cloudinary.com/donghuixin/image/upload/v1547715107/Lena.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>马尔可夫随机场去噪</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="图像去噪的目的和意义"><a href="#图像去噪的目的和意义" class="headerlink" title="图像去噪的目的和意义"></a>图像去噪的目的和意义</h1><p>图像一旦出现了较强的噪声的干扰时其利用率会大大降低，造成一定程度上的影响，比如并且在很多领域中，如天文观测或者医学生物检测，图像的拍摄获取耗费巨大或者某一时刻拍摄的图像才有应用价值，不适合进行或者代价太大而不允许第二次拍摄。故我们需要图像去模糊技术来对各行各业的拍摄进行后期保障，以此来获取更加清晰，更方便使用的图像。图像噪声污染问题的普遍性和所带来的后果问题清晰可见，运动图像去模糊问题备受关注。</p>
+<p> </p>
+<h2 id="图像去噪技术研究现状"><a href="#图像去噪技术研究现状" class="headerlink" title="图像去噪技术研究现状"></a>图像去噪技术研究现状</h2><p>图像去噪技术在数字图像处理领域中是一个经典的研究问题,噪声去除好坏会直接影响图像分割、边缘检测、特征提取等对数字图像的后续处理的效果。人们根据实际图像的特点、噪声的频谱分布的规律和统计特征,已经开发了多种多样的去噪方法,例如有的传统的去噪方法就是利用均值滤波器去除高斯噪声、或利用中值滤波器去除椒盐噪声(脉冲噪声)。其中,较为有代表性的是变窗长自适应算法和矢量中值滤波器(WF)算法。此外, 还有利用失量的方向信息进行彩色信息处理,提出了矢量方向滤波器(VDF);混合方向滤波器HDF);模糊矢量滤波器(FVF);加权的矢量滤波器(WVF):开关型矢量滤波器SVF);以及基于相似度的矢量滤波器(SBVF);小波变换阙值法:神经网络等方法[1]。<br>随着科技信息的发展，学者们又提出了一些新颖的算法，如采用模糊加权方法的改进版均值滤波算法[2]:根据模糊数学理论及随机脉冲噪声特点提取模糊特征,并结合边缘信息自适应中值滤波[3]:以及本文介绍的，根据马尔可夫随机场进行图像去噪的算法等。<br>这些算法在实际应用中都能取得一定效果,但仍存在不足之处:对多种噪声共同干扰的图像去噪效果不理想;去噪的同时平滑了图像的细节使图像清晰度降低,质量下降。研究人员依旧在探索更好的去噪方法。</p>
+<h1 id="马尔可夫随机场去噪原理"><a href="#马尔可夫随机场去噪原理" class="headerlink" title="马尔可夫随机场去噪原理"></a>马尔可夫随机场去噪原理</h1><h2 id="MRF基本理论"><a href="#MRF基本理论" class="headerlink" title="MRF基本理论"></a>MRF基本理论</h2><p>假设X={X1,X2,…,X}是定义在S上的一族随机变量,其中每一个随机变量X在L上取值xi。这个随机变量族称为随机场。采用符号Xi=xi表示事件Xi取值xi,同时采用符号(X1=x1,…,Xn=xn)表示随机场中同时取给定值的联合事件。为了简化表达,联合事件可以表示为X=x,其中x=(x1,…,xn)是随机场X的一个配置,对应于随机场的一个现实。对于离散的标记集合L,随机变量X取值x的概率可以表示为P(X=x),简记为P(x);联合概率可以表示为P(X=x)=P(X1=x1,…,Xn=xn),简记为P(x)。对于连续的L来说,可以用概率密度函数来进行表示,即P(Xi=xi)和P(X=x)。在具有邻域系统N的格网集合S上定义的随机场X称为 Markov随机场[4] ( Markov random field,MRF),它能且仅能满足如下的两个约束条件:<br>(1)正定性:P(x)&gt;0,Vx∈Ω;<br>(2)Markov性: P(xi | xs/i)= P(xi|xNi)。<br>其中,S/i表示格网S中位置i以外的所有位置,xNi为下式所示的一个标记集合:<br>xNi={xj | j∈Ni}<br>表示与i相邻的所有邻域位置的标记集合。正定性的条件一般都能满足。 Markov性描述的是随机场X的局部特性。在MRF中,只有相邻标记之间才存在直接的交互关系。</p>
+<h2 id="Markov随机场Ising模型"><a href="#Markov随机场Ising模型" class="headerlink" title="Markov随机场Ising模型"></a>Markov随机场Ising模型</h2><p>实际应用中常采用 Gibbs分布来描述像素空间邻域的作用关系,不同的局部概率定义方式就会形成不同的MRF模型表示,常用的 Markov随机场模型有: Ising模型、 Potts模型、MLL模型、 Gauss– Markov模型、四叉树模型等。在这些模型中,除了Gaus- Markov模型常用于纹理建模外,其余的模型都常用于标记场建模,本节只对Ising模型进行简单介绍。<br>Ising模型是1925年 Ernst Ising在他的博土论文中提出的,他解决了切分函数的计算问题。该模型定义在有限图上,图中每一个顶点只有两种取值。计算能量函数时,只考虑最邻近顶点之间的交互。</p>
+<p><center><br> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1547715107/Ising%E6%A8%A1%E5%9E%8B.jpg" alt="Ising"><br>图3.1 Ising模型<br>  </center><br> Ising模型在图像处理的有关应用中,常采用如上图所示的一阶邻域系统,即4-邻域,它只包含二值的状态空间,相应的能量函数为<br><br> <center><br> $$<br>  U(x)=\alpha\sum_{j}W_{ij}x_{j}+b_{i}<br> $$<br>  </center><br>  其中,a和β分别表示单点基团和双点基团的势参数。该模型非常简单,局部概率可以表示为</p>
+<h2 id="常用Markov随机场参数估计方法"><a href="#常用Markov随机场参数估计方法" class="headerlink" title="常用Markov随机场参数估计方法"></a>常用Markov随机场参数估计方法</h2><p>所有基于 Markov随机场的图像处理算法都是参数化算法。这些参数的正确选择必须紧紧依靠所要处理的图像数据,也就是说模型的参数需要依据图像数据系统估计。一般来说,这个问题是相当复杂的。特定的参数估计方法有很多,但是通用的方法却很少,甚至可以说没有通用的参数估计方法。在本节我们主要介绍几个在MRF模型参数估计中常用最大似然和最大伪似然方法。</p>
+<h3 id="最大似然估计方法"><a href="#最大似然估计方法" class="headerlink" title="最大似然估计方法"></a>最大似然估计方法</h3><p>最大似然( maximization likelihood,ML)估计是统计与图像分析领域中图像参数估计的一个通用准则。因为ML方法并不考虑随机场X的格网结构,因此此处可以将X视为任意的一个有限集合。假设随机场X的参数集合记为λ,则给定X的个实现x,那么λ的极大似然估计可以表示为</p>
+<p>其中,x是用来估计模型参数的数据，其似然分布为：</p>
+<p>用上式进行参数估计,需要计算随机场的拆分函数Z(入),这在计算上是不可行的因此这种方法最大的困难就在于拆分函数的计算。通常采用近似的逼近方法进行计算,比如最大伪似然算法。</p>
+<h3 id="最大伪似然估计"><a href="#最大伪似然估计" class="headerlink" title="最大伪似然估计"></a>最大伪似然估计</h3><p>最大伪似然算法是极大似然估计的一个近似框架,它对最大似然算法的逼近是根据局部概率P(xi|xNi)来进行的,它将 Gibbs分布中的能量函数分解为每一个位置上的能量函数的和,</p>
+<p>其中,Ui(xi,xNi)是包含位置i和邻域Ni的势团能量。只考虑一元和二元的势函数的能量函数可以表示为:</p>
+<p>对应的局部条件概率为:</p>
+<p>伪似然分布定义为:</p>
+<p>从公式中可以看出,伪似然分布可以表示为随机场中所有像素的条件概率的乘积,其中不包含拆分函数。因为随机场中每一位置与其邻域并不是相互独立的,因此伪似然函数并不是真正意义上的似然函数。通过对随机场参数的导数为0,可以获取关于参数的方程组,从而方便进行求解。此即为极大伪似然参数估计方法。<br>3.4Markov随机场去噪原理<br>给一幅二值图像加入噪声，加入噪声之后的图像是我们的观测值Y，而实际变量是隐变量X，现在我们就要通过Y推断X。由于噪声等级比较小，因此我们知道xi和yi之间有强烈的相关性。我们还知道图像中相邻像素xi和xj的相关性很强。这种先验知识可以通过使用马尔科夫随机场模型进行描述，它的无向图如下：<br> <center><br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1547715106/Markov.jpg" alt="Markov"><br><br>图3.2 马尔可夫随机场模型<br>  </center><br>势函数为：<br>E(x,y)=h∑_i▒x_i -β∑_({i,j})▒〖x_i x_j-η∑_i▒〖x_i x_j 〗〗<br>这里只有两种团块，第一种是xj和yi，第二种是xi和相邻的xj。我们分别给以不同系数用来调节其在势函数中的权重，由于最后的概率计算要取p(x,y)=1/Z exp⁡{-E(x,y)}最大，等价于取E(x,y)最小。
+ </p>
+<h1 id="实验测试与结果分析"><a href="#实验测试与结果分析" class="headerlink" title="实验测试与结果分析"></a>实验测试与结果分析</h1><p>我对选取的几组图片进行加噪处理，污染获得的原始的图像，然后通过去噪算法提取出相关信息，并对加噪图像进行恢复。不断计算当x(i,j)=-1时函数E(i,j)大小，设其为E1,再计算x(i,j)= 1，能量E(i,j)=E2,不断比较E1和E2的大小并进行迭代，若计算得到的能量E1小于E2,则E1、E2计算方法不变，否则用x(i,j)= 1来计算E1的值，继续进行迭代计算直到前两次迭代带来的改变小于阈值（通过计算对应图片像素点差异获得）。<br>以对图像处理常用图片lena的效果图来进行分析评估：<br> <center><br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1547715107/Lena.jpg" alt="lena"><br>图4.1 (a)迭代10次的图片；(b)迭代50次；(c)迭代100次；(d)迭代1000次</center><br>如上图所示是迭代不同次数的图像处理的效果图分析，可以看出随着迭代次数的上升，对噪声的抑制有着明显的提升，但同样存在门限效应，不会一直改善下去。<br> <center><br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1547715109/LenaPRO.png" alt=""><br>图4.2 (a)原图；(b)加噪处理；(c)去噪效果图<br>  </center><br>通过原始图像，加噪后的图像与去噪效果图的对比我们可以发现，马尔可夫随机场算法能够对图像有着显著的改善，但比较原图可以发现与原始图像还是存在了一些差距，并且一定程度上均化了原始图像的边缘信息，在图像处理的应用尤其是信息比较丰富的灰度图像处理中存在一定的局限性。不过其对于二值图像的处理效果还是较好的，我找了两组图片并对他们进行了处理。<br> <center><br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1547715107/Letters.png" alt=""><br>图4.3 从左往右依次是：原图、加噪处理图、去噪效果图<br>  </center><br>重新放入两组二值图像加入噪声进行评估，可以看出去噪效果非常明显。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Markov随机场是一个描述图像数据局部相关性的二维随机场模型,用条件概率描述图像数据分布,该条件概率与图像中点的位置无关,而是包含关于各点的相互位置信息;同时根据MRF与 Gibbs分布的一致性,通过能量函数确定MRF的条件概率,从而其在全局上具有一致性。在实际应用中通过单个像素及其最近领域的简单局部交互计算, Markov随机场可以获得复杂的全局行为。<br>本文中建立了一个能量匹配代价函数，只需要求得能量函数的匹配代价越小，估计得到像素点去噪效果也就越好。其本质就是一个迭代优化求解问题，建立合理的能量函数添加约束条件进行迭代，迭代次数越多，求得的恢复图像也会更好，但是这样带来的问题是计算量不断增大，消耗的时间会大大增加。所以一般会设置好阈值来进行求解。<br>由于马尔可夫链的独特作用，它在图像处理领域有着非常广泛的应用，例如在马尔可夫随机场图像分割算法也有非常好的处理效果。</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><pre><code>[1] NI C, YE M, CHEN X. An Improved Adaptive Median Filter Algorithm [J]. Journal of Image and Graphics, 2006, 5: 010.
+[2] Arakawa K. Median filter based on fuzzy rules and its application to image restoration[J]. Fuzzy sets and systems, 1996, 77(1): 3-13. 
+[3] Antonini M, Barlaud M, Mathieu P, et al. Image coding using vector quantization in the wavelet transform domain[C]//International Conference on Acoustics, Speech, and Signal Processing. IEEE, 1990: 2297-2300. 
+[4] 刘国英, 马国锐, 王雷光, 等. 基于 Markov 随机场的小波域图像建模及分割[J]. 2010.
+[5] Wang Z F, Zheng Z G.Aregion based stereo matching algorithm using cooperativeoptimization[C]//Computer Vision and Pattern Recognition, 2008. CVPR 2008. IEEEConference on. IEEE, 2008: 1-8.
+[6] G.Luo, X Yang, Q Xu. Fast stereo matching algorithm using adaptive window[J]. International Symposiums Information Processing, 2008:25-30.
+</code></pre><hr>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://poetryscience.ink/2019/01/17/马尔可夫随机场去噪/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://poetryscience.ink/2019/01/17/马尔可夫随机场去噪/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
