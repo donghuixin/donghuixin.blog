@@ -188,24 +188,201 @@
 <h2 id="2-3-能量回收子系统设计"><a href="#2-3-能量回收子系统设计" class="headerlink" title="2.3 能量回收子系统设计"></a>2.3 能量回收子系统设计</h2><p>本能量采集系统以TI公司的低功耗电源管理芯片BQ25504为核心搭建而成，电路工作原理如图7所示。BQ25504内部集成低压升压电路，能够将外部微弱电压升压至锂离子电池的充电电压。通过外部配置电阻，确定充电电池欠压和过压电平，将收集到的能量有效的充至预先设定好的充电电压的锂离子电池内，并防止电池长时间放电导致电池损伤。该系统收集的能量可以用于整个系统的供电。其实物如下图8所示：<br> <center><br> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371930/JNJP2017ShenWu/%E7%94%B5%E8%B7%AF%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png" alt="6"><br>    图7 电路工作原理框图<br> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371931/JNJP2017ShenWu/%E8%83%BD%E9%87%8F%E6%94%B6%E9%9B%86BQ25570.jpg" alt="7"><br>                                       图8 电路实物图<br>                                       </center></p>
 <h2 id="2-4-节能装置设计"><a href="#2-4-节能装置设计" class="headerlink" title="2.4 节能装置设计"></a>2.4 节能装置设计</h2><p>本产品主要面向分散的电路设计者的电路设计需求，时间成本与经济收益不完全正相关，故我们通过减少加热等高能耗部件适度控制反应速率来优化蚀刻过程。<br>同时我们采用原电池反应结构，隔绝反应原料，回收能量。原电池反应模块由反应槽、Nafion 117质子交换膜组成，如图9所示。其中铜板和碳板由特殊的夹具固定，如图10所示，该夹具与铜板和碳板两边的接触面导电性好。反应槽采用质子交换膜分隔出左右腔室，左腔室放置H2O2，NaCl溶液和碳板电极作正极，右腔室放置HCl、NaCl溶液和铜板作为负极，质子交换膜在反应过程中只允许氢离子流过，电子通过外部导线构成闭合回路。其优化点如下：1、减少氯气产生；2、降低原料损耗；3、降低反应的危险性。<br>除此本产品利用低功耗气动阀门配合密闭容器构成可以向下级添加原料的防挥发储料室，如下图11所示： <br></p>
 <p><center><br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371931/JNJP2017ShenWu/%E8%85%90%E8%9A%80%E5%8F%8D%E5%BA%94%E8%A3%85%E7%BD%AE.jpg" alt="8"><br>    图9 腐蚀反应装置图<br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371930/JNJP2017ShenWu/%E7%94%B5%E6%9E%81%E5%A4%B9%E5%85%B7%E6%A8%A1%E5%9E%8B.jpg" alt="9"><br>  图10 电极夹具模型剖视图<br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371930/JNJP2017ShenWu/%E5%82%A8%E6%96%99%E5%AE%A4.jpg" alt="10"><br>                          图11 储料室结构图<br></center><br>气阀主要用于调控腔内气压，与酸性或氧化性溶液非直接接触，减小了所存储溶液对阀门材料的要求。当气阀关闭，内部大气与外部大气隔绝，液面稍微下降后内外气压差平衡使得液面不再下降；当气阀开启时，内外压强平衡，液体随重力流下，实现加料功能。由于该储料室在气阀关闭时为密闭空间，所以能够降低原料挥发。该储料室结构具有低功耗，防腐，防挥发的优点。</p>
-<h1 id="3-工作原理与理论分析计算"><a href="#3-工作原理与理论分析计算" class="headerlink" title="3. 工作原理与理论分析计算"></a>3. 工作原理与理论分析计算</h1><h2 id="3-1-污水处理原理及理论分析"><a href="#3-1-污水处理原理及理论分析" class="headerlink" title="3.1 污水处理原理及理论分析"></a>3.1 污水处理原理及理论分析</h2><p>实验室常用的铜板腐蚀反应利用的是铜失电子的氧化还原反应，该反应如式3.1-1所示：<br>                Cu+2HCl+H2O2=CuCl2+2H2O                    （3.1-1）<br>蚀刻后废液中含有高浓度的铜离子，通过多次测试废液中铜离子的平均浓度约为2370mg/L(见附录一)。一级废液处理原理：根据氢氧化铜的溶度积常数Ksp(氢氧化铜)=2.2×10-20,计算得碱沉淀所需的氢氧化钠量为3g，因为废液中存在少量未消耗的盐酸溶液，故碱量会增加至4g，可通过酸碱传感器，进一步量化加入的碱量。二级废液处理原理：针对实验室，可采用以下两种处理方法：1)三维石墨烯吸附。三维石墨烯是农业废弃物稻壳和Hummers法合成的氧化石墨烯的复合物。稻壳经碳化后富含微孔和中孔结构，比表面积达886.3m2/g，微孔含量约40%，中孔含量约60%；氧化石墨烯作为一种新型材料，具有二维单原子层结构、丰富的表面活性基团以及巨大的比表面积。但碳化后的稻壳粉易溶解在溶液中，且氧化石墨烯亲水性高，存在固液分离困难的问题，故通过二维石墨烯与稻壳活性炭的复合改性，大大提高两者的吸附能力，以及与溶液的分离。2)阳离子交换树脂吸附。阳离子交换树脂离解后，本体所含的负电基团，能吸附结合溶液中的其他阳离子，达到吸附的效果。不足之处是吸附速率慢，不可重复使用，但吸附效果极好，成本低。</p>
-<h2 id="3-2能量回收系统工作原理及理论分析"><a href="#3-2能量回收系统工作原理及理论分析" class="headerlink" title="3.2能量回收系统工作原理及理论分析"></a>3.2能量回收系统工作原理及理论分析</h2><p>由NERNST理论电动势计算公式[3]得：<br>EMF=1.4322V<br>通过化学状态改变可以求得理想状态下每摩尔铜失去2mol电子成为铜离子可产生<strong>53511.1mAxH</strong>的电量（详见附录二）。本系统装置中，由于氧化剂与还原剂被隔离，蚀刻反应发生后，在极板电动势作用下氢离子透过质子交换膜，结合过氧化氢形成水分子；同时电子在电场作用下定向移动，产生电流，构成闭合回路，如图12所示。该原电池可作为能量采集电路的输入，将其等效为戴维南电路，如图13所示。<br>根据溶液电导公式[4,5]（其中C为电解质溶液浓度，A∞m为溶液的极限电导率，A为该类型电解质溶液的经验常数）：<br>                                                          (3.2-1)<br>发现增大电极极板的相对正对面积（AS）、减少极板间距（L）并加入强电解质(NaCl)可降低内阻，提高其电流输出能力。根据测试数据绘制三者联系图，如图14所示，随着板间间距不断减小，NaCl浓度不断增加，电路输入内阻不断减小。为提高电路采集效率，需尽可能减小输入内阻，故综合考虑实际工艺水平及成本效益并进行相关的测试分析后（详见附录一），板间间距选择2mm，电解质NaCl浓度选择9g/100mL。</p>
+<h1 id="3-工作原理与理论分析计算"><a href="#3-工作原理与理论分析计算" class="headerlink" title="3. 工作原理与理论分析计算"></a>3. 工作原理与理论分析计算</h1><h2 id="3-1-污水处理原理及理论分析"><a href="#3-1-污水处理原理及理论分析" class="headerlink" title="3.1 污水处理原理及理论分析"></a>3.1 污水处理原理及理论分析</h2><p>实验室常用的铜板腐蚀反应利用的是铜失电子的氧化还原反应，该反应如式3.1-1所示：</p>
+<p><center><br>                $Cu+2HCl+H_{2}O_{2}=CuCl_{2}+2H_{2}O$                    （3.1-1）<br></center><br>蚀刻后废液中含有高浓度的铜离子，通过多次测试废液中铜离子的平均浓度约为2370mg/L(见附录一)。一级废液处理原理：根据氢氧化铜的溶度积常数Ksp(氢氧化铜)=2.2×10-20,计算得碱沉淀所需的氢氧化钠量为3g，因为废液中存在少量未消耗的盐酸溶液，故碱量会增加至4g，可通过酸碱传感器，进一步量化加入的碱量。二级废液处理原理：针对实验室，可采用以下两种处理方法：1)三维石墨烯吸附。三维石墨烯是农业废弃物稻壳和Hummers法合成的氧化石墨烯的复合物。稻壳经碳化后富含微孔和中孔结构，比表面积达886.3m2/g，微孔含量约40%，中孔含量约60%；氧化石墨烯作为一种新型材料，具有二维单原子层结构、丰富的表面活性基团以及巨大的比表面积。但碳化后的稻壳粉易溶解在溶液中，且氧化石墨烯亲水性高，存在固液分离困难的问题，故通过二维石墨烯与稻壳活性炭的复合改性，大大提高两者的吸附能力，以及与溶液的分离。2)阳离子交换树脂吸附。阳离子交换树脂离解后，本体所含的负电基团，能吸附结合溶液中的其他阳离子，达到吸附的效果。不足之处是吸附速率慢，不可重复使用，但吸附效果极好，成本低。</p>
+<h2 id="3-2能量回收系统工作原理及理论分析"><a href="#3-2能量回收系统工作原理及理论分析" class="headerlink" title="3.2能量回收系统工作原理及理论分析"></a>3.2能量回收系统工作原理及理论分析</h2><p>由NERNST理论电动势计算公式[3]得：</p>
+<p><center><br>$EMF=1.4322V$<br>  </center><br>通过化学状态改变可以求得理想状态下每摩尔铜失去2mol电子成为铜离子可产生<strong>53511.1mAxH</strong>的电量（详见附录二）。本系统装置中，由于氧化剂与还原剂被隔离，蚀刻反应发生后，在极板电动势作用下氢离子透过质子交换膜，结合过氧化氢形成水分子；同时电子在电场作用下定向移动，产生电流，构成闭合回路，如图12所示。该原电池可作为能量采集电路的输入，将其等效为戴维南电路，如图13所示。<br>根据溶液电导公式[4,5]（其中C为电解质溶液浓度，A∞m为溶液的极限电导率，A为该类型电解质溶液的经验常数）：<br>                                                          (3.2-1)<br>发现增大电极极板的相对正对面积（AS）、减少极板间距（L）并加入强电解质(NaCl)可降低内阻，提高其电流输出能力。根据测试数据绘制三者联系图，如图14所示，随着板间间距不断减小，NaCl浓度不断增加，电路输入内阻不断减小。为提高电路采集效率，需尽可能减小输入内阻，故综合考虑实际工艺水平及成本效益并进行相关的测试分析后（详见附录一），板间间距选择2mm，电解质NaCl浓度选择9g/100mL。</p>
 <p><center><br> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371931/JNJP2017ShenWu/%E7%A6%BB%E5%AD%90%E6%B5%81%E5%90%91.jpg" alt="11"><br>   图12 离子流向图<br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371930/JNJP2017ShenWu/%E6%88%B4%E7%BB%B4%E5%8D%97%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF.jpg" alt="12"><br>   图13 戴维南等效电路图<br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371930/JNJP2017ShenWu/%E7%94%B5%E9%98%BB%E4%B8%8E%E6%9E%81%E6%9D%BF%E9%97%B4%E8%B7%9D.png" alt="13"><br>                            图14 电阻与极板间距溶液浓度关系<br>  </center></p>
 <h1 id="4-产品测试及性能分析"><a href="#4-产品测试及性能分析" class="headerlink" title="4. 产品测试及性能分析"></a>4. 产品测试及性能分析</h1><p>为充分了解本蚀刻机在实际的腐蚀过程中，其性能参数的变化情况、电能的收集效果、废液处理效果，我们设计了相应的实验对本产品进行测试。</p>
 <h2 id="4-1-PCB板腐蚀效果分析"><a href="#4-1-PCB板腐蚀效果分析" class="headerlink" title="4.1 PCB板腐蚀效果分析"></a>4.1 PCB板腐蚀效果分析</h2><p>本产品的PCB腐蚀效果从蚀刻均匀性、最小线宽、最小线距等方面进行分析。由上图可知，根据R=ρL/S（低频条件下）和测量出的电阻值计算铜板剩余厚度，计算出的蚀刻均匀度≥92%（详见附录一），故其蚀刻均匀度满足绝大多数电源电路乃至射频电路需求。图15为均匀性检测图。<br>最小线宽蚀刻能力：如图16所示，当线宽为5mil、6mil、7mil、8mil、9mil、10mil时，蚀刻线两端导通，具有较好的腐蚀效果，故腐蚀最小蚀刻线宽≤5mil。最小线距：如图17所示，当相邻两根蚀刻线的线距分别为5mil、6mil、7mil、8mil、9mil、10mil时，线与线之间均不导通，故最小蚀刻间距≤5mil。综上所述，本蚀刻机蚀刻效果满足绝大部分电路设计要求。</p>
 <p><center><br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371930/JNJP2017ShenWu/%E5%9D%87%E5%8C%80%E6%80%A7%E6%A3%80%E6%B5%8B.jpg" alt="14"><br>  图15均匀性检测图<br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371933/JNJP2017ShenWu/%E6%9C%80%E5%B0%8F%E7%BA%BF%E5%AE%BD.jpg" alt="15"><br>  图16 腐蚀的最小线宽实物图<br>  <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371933/JNJP2017ShenWu/%E6%9C%80%E5%B0%8F%E7%BA%BF%E8%B7%9D.jpg" alt="16"><br>                                 图17腐蚀的最小线距图<br> </center></p>
 <h2 id="4-2-污水处理效果分析"><a href="#4-2-污水处理效果分析" class="headerlink" title="4.2 污水处理效果分析"></a>4.2 污水处理效果分析</h2><p>本蚀刻机的污水处理模块将产生的污水第一次检测于2017年3月27日送至武汉理工大学材料研究与测试中心进行测试，如图18所示为主要测试结果（具体测试数据见附件一）。第二次检测于2017年5月10日送至武汉华正环境检测技术有限公司进行测试（检测报告见附录三），主要测试数据如表1所示。</p>
-<p><center><br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371931/JNJP2017ShenWu/%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86.jpg" alt="17"><img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371932/JNJP2017ShenWu/%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86b.jpg" alt="18"> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371931/JNJP2017ShenWu/%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86c.jpg" alt="19"> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371932/JNJP2017ShenWu/%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86d.jpg" alt="20"><br>图18 污水处理检测结果 (图18-a为第一级污水处理检测结果；图18-b为第二级污水处理<br>  </center><br>（阳离子交换树脂吸附）检测结果；图18-c、d为第二级污水处理（三维石墨烯吸附）检测结果。)<br>如上图18可得，经过碱沉淀之后，再通过阳离子交换树脂吸附或三维石墨烯吸附处理后的废液达到国家排放标准（一级排放标准为小于0.5mg/L），平均铜离子浓度从2370mg/L分别降至0.4552mg/L和0.3450mg/L（2370mg/L为腐蚀一块10cm*15cm厚1oz的单面覆铜板所得浓度）。以阳离子交换树脂为例，铜离子浓度可降低约：<br>                      (2370-0.4552)÷2370=99.98%                   （4.2-1）<br>且处理后的水可在本系统循环利用，滤渣经过初步处理可作为生产杀菌剂或催化剂的原材料。<br>第二次送检检测了蚀刻废水中的几种主要的污染物，检测结果如表1：<br>表1 蚀刻废水主要污染物检测结果<br>检测项目    废水原液（mg/L）    树脂处理后（mg/L）    三维石墨烯处理后（mg/L）<br>铜    2.06×104    0.224    0.593<br>铅    12.8    ND    ND<br>铬    0.231    0.017    0.005<br>标准覆铜板有相关的生产工艺和行业生产标准，但仍然存在一定的有毒重金属如铅等通过该检测数据可以看出，本系统对于几种常见的重金属污染污染物都有明显的降低功能，其中处理之后的铅浓度低于该测试仪器的化学检出限ND(0.1mg/L) ,铬的初始浓度满足一级水指标，但处理之后仍然有明显降低，且三维石墨烯的处理效果极佳。</p>
+<p><center><br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371931/JNJP2017ShenWu/%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86.jpg" alt="17"><img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371932/JNJP2017ShenWu/%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86b.jpg" alt="18"> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371931/JNJP2017ShenWu/%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86c.jpg" alt="19"> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1552371932/JNJP2017ShenWu/%E6%B1%A1%E6%B0%B4%E5%A4%84%E7%90%86d.jpg" alt="20"><br>图18 污水处理检测结果 (图18-a为第一级污水处理检测结果；图18-b为第二级污水处理<br>  </center><br>（阳离子交换树脂吸附）检测结果；图18-c、d为第二级污水处理（三维石墨烯吸附）检测结果。)<br>如上图18可得，经过碱沉淀之后，再通过阳离子交换树脂吸附或三维石墨烯吸附处理后的废液达到国家排放标准（一级排放标准为小于0.5mg/L），平均铜离子浓度从2370mg/L分别降至0.4552mg/L和0.3450mg/L（2370mg/L为腐蚀一块10cm*15cm厚1oz的单面覆铜板所得浓度）。以阳离子交换树脂为例，铜离子浓度可降低约：<br>                     $ (2370-0.4552)÷2370=99.98% $          （4.2-1）<br>且处理后的水可在本系统循环利用，滤渣经过初步处理可作为生产杀菌剂或催化剂的原材料。<br>第二次送检检测了蚀刻废水中的几种主要的污染物，检测结果如表1：</p>
+<p><center><br>表1 蚀刻废水主要污染物检测结果</center></p>
+<hr>
+  <center>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">检测项目</th>
+<th style="text-align:center">废水原液（mg/L）</th>
+<th style="text-align:center">树脂处理后（mg/L）</th>
+<th style="text-align:center">三维石墨烯处理后（mg/L）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">铜</td>
+<td style="text-align:center">2.06×104</td>
+<td style="text-align:center">0.224</td>
+<td style="text-align:center">0.593</td>
+</tr>
+<tr>
+<td style="text-align:center">铅</td>
+<td style="text-align:center">12.8</td>
+<td style="text-align:center">ND</td>
+<td style="text-align:center">ND</td>
+</tr>
+<tr>
+<td style="text-align:center">铬</td>
+<td style="text-align:center">0.231</td>
+<td style="text-align:center">0.017</td>
+<td style="text-align:center">0.005</td>
+</tr>
+</tbody>
+</table>
+<p>   </p></center><br> <br>标准覆铜板有相关的生产工艺和行业生产标准，但仍然存在一定的有毒重金属如铅等通过该检测数据可以看出，本系统对于几种常见的重金属污染污染物都有明显的降低功能，其中处理之后的铅浓度低于该测试仪器的化学检出限ND(0.1mg/L) ,铬的初始浓度满足一级水指标，但处理之后仍然有明显降低，且三维石墨烯的处理效果极佳。<br><p></p>
 <h2 id="4-3-节能效果分析"><a href="#4-3-节能效果分析" class="headerlink" title="4.3 节能效果分析"></a>4.3 节能效果分析</h2><p>利用微型电能测试器对系统耗电进行测试（具体测试结果与数据见附录一），表2为本蚀刻机稳定工作时单个蚀刻槽的各种能量及其效率：</p>
-<p>表2 能量收集系统<br>腐蚀时间(s)    平均充电功率(mW)    充电电路效率    总化学能（J）    总收集能量(J)<br>340    19.08    55.70%    300.81    6.48<br>323    19.25    55.28%    292.28    6.19<br>354    17.91    59.70%    315.75    6.34<br>344    17.90    53.52%    286.85    6.16<br>362    17.77    58.69%    322.88    6.44<br>     通过该表可以看出本蚀刻机，当腐蚀单块单面覆铜板(15cm×10cm)时，对电池的平均充电功率为18.38mW，平均腐蚀时间为6分钟，电路能量转换效率约为55%，能够在该反应中回收能量，目前测得该腐蚀反应产生平均电流约为20mA，但在实际测试中发现最大电流可达100mA（见附录一），能量回收方面也有巨大潜力。腐蚀一块该规格铜板收集的电能：<br>                  E=P×t=360s×18.38mW=6.62×103mJ                   （4.3-1）<br>在增加能量回收系统的情况下，对该系统进行对比测试，结果如表3所示：<br>表3 能量对比表                               表4 腐蚀方式对比表<br>    消耗能量    回收能量        腐蚀方式    耗时    平均耗能<br>无能量回收    93mW<em>H    0        无设备腐蚀    30~90s    0<br>有能量回收    93mW</em>H    2mW<em>H        AEM3500    30~120s    20.8W</em>H<br>                本产品    300~360s    0.093W*H<br>本系统采用了创新性的结构，使得系统总能耗低，平均功率约930mW,最大瞬时功率约1.6W。但由于同时也取缔了常用腐蚀机的高能耗器件(平均功率约1kW)，蚀刻时间长于常用腐蚀方式，对比数据如表4所示。鉴于实验室使用时，对生产速度要求不高，本产品仍然具有很大的竞争力。</p>
+<p><center><br>表2 能量收集系统</center></p>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">腐蚀时间(s)</th>
+<th style="text-align:center">平均充电功率(mW)</th>
+<th style="text-align:center">充电电路效率</th>
+<th style="text-align:center">总化学能（J）</th>
+<th style="text-align:center">总收集能量(J)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">340</td>
+<td style="text-align:center">19.08</td>
+<td style="text-align:center">55.70%</td>
+<td style="text-align:center">300.81</td>
+<td style="text-align:center">6.48</td>
+</tr>
+<tr>
+<td style="text-align:center">323</td>
+<td style="text-align:center">19.25</td>
+<td style="text-align:center">55.28%</td>
+<td style="text-align:center">292.28</td>
+<td style="text-align:center">6.19</td>
+</tr>
+<tr>
+<td style="text-align:center">354</td>
+<td style="text-align:center">17.91</td>
+<td style="text-align:center">59.70%</td>
+<td style="text-align:center">315.75</td>
+<td style="text-align:center">6.34</td>
+</tr>
+<tr>
+<td style="text-align:center">344</td>
+<td style="text-align:center">17.90</td>
+<td style="text-align:center">53.52%</td>
+<td style="text-align:center">286.85</td>
+<td style="text-align:center">6.16</td>
+</tr>
+<tr>
+<td style="text-align:center">362</td>
+<td style="text-align:center">17.77</td>
+<td style="text-align:center">58.69%</td>
+<td style="text-align:center">322.88</td>
+<td style="text-align:center">6.44</td>
+</tr>
+</tbody>
+</table>
+<p>  <br>     通过该表可以看出本蚀刻机，当腐蚀单块单面覆铜板(15cm×10cm)时，对电池的平均充电功率为18.38mW，平均腐蚀时间为6分钟，电路能量转换效率约为55%，能够在该反应中回收能量，目前测得该腐蚀反应产生平均电流约为20mA，但在实际测试中发现最大电流可达100mA（见附录一），能量回收方面也有巨大潜力。腐蚀一块该规格铜板收集的电能：<br>     <center><br>                 $ E=P×t=360s×18.38mW=6.62×103mJ$                  （4.3-1）<br>  </center><br>在增加能量回收系统的情况下，对该系统进行对比测试，结果如表3所示：</p>
+<p><center><br>表3 能量对比表                               表4 腐蚀方式对比表</center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">消耗能量</th>
+<th style="text-align:center">回收能量</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">腐蚀方式</th>
+<th style="text-align:center">耗时</th>
+<th>平均耗能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">无能量回收</td>
+<td style="text-align:center">93mW*H</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">无设备腐蚀</td>
+<td style="text-align:center">30~90s</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="text-align:center">有能量回收</td>
+<td style="text-align:center">93mW*H</td>
+<td style="text-align:center">2mW*H</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">AEM3500</td>
+<td style="text-align:center">30~120s</td>
+<td>20.8W*H</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">本产品</td>
+<td style="text-align:center">300~360s</td>
+<td>0.093W*H</td>
+</tr>
+</tbody>
+</table>
+<p>本系统采用了创新性的结构，使得系统总能耗低，平均功率约930mW,最大瞬时功率约1.6W。但由于同时也取缔了常用腐蚀机的高能耗器件(平均功率约1kW)，蚀刻时间长于常用腐蚀方式，对比数据如表4所示。鉴于实验室使用时，对生产速度要求不高，本产品仍然具有很大的竞争力。</p>
 <h1 id="5-效益分析"><a href="#5-效益分析" class="headerlink" title="5. 效益分析"></a>5. 效益分析</h1><p>据中商产业研究院大数据库数据知湖北省共有正规高职高校共128所，其中开设有电类专业院校共103所，占比约80.5%。每所高校拥有相关实验室数量为5~10个不等，以每所院校5个该实验室为例。高校实验室又是PCB板前端开发的主力军，在电路设计前期，电路设计需要不断改动，单个实验室周平均蚀刻铜板面积约为1m2。</p>
-<h2 id="5-1-减排效益分析"><a href="#5-1-减排效益分析" class="headerlink" title="5.1 减排效益分析"></a>5.1 减排效益分析</h2><p>1m2的标准覆铜板有铜305g，一般约60%的铜参与反应，即腐蚀掉183g的铜。蚀刻废液的铜离子平均浓度为2370mg/L，单个实验室每周可减少含铜废水约77.2L。若湖北高校40%的实验室采用了本新型腐蚀机，则每年（52周）可减少高浓度含铜污水排放：<br>                    77.2×52×309×5×0.4=2.48×105L                  （5.1-1）<br>根据《中华人民共和国污水排放标准》（GB 8978-2015）的规定，三级污水排放标准中含铜离子应小于2mg/L, 认定含铜离子≥2mg/L为被污染水源，据质量守恒原理与扩散原理[6]<br>可知，在足够时间下，减少了因直接排放而污染的水：<br>                     2370mg/L×2.48×105L÷2mg/L=2.938×108L              (5.1-2)</p>
-<h2 id="5-2-经济效益分析"><a href="#5-2-经济效益分析" class="headerlink" title="5.2 经济效益分析"></a>5.2 经济效益分析</h2><p>（1）电路板蚀刻后，直接排放的废液含高浓度铜离子，这些铜具有很高的回收价值。蚀刻机腐蚀一块规格为15cm×10cm（0.015m2）厚1oz的单面铜板（约有4.575g铜）可回收约1.78g铜。1.78g的铜产生约2.21g氧化铜，产生的氧化铜具有极好的杀菌与催化作用，且纯度较高。由于产生1g氧化铜需1g的氢氧化钠，根据氧化铜（0.69RMB/g）和氢氧化钠（0.098 RMB/g）的市场价值可知，回收1g氧化铜的净收入为0.592RMB。折合成1m2通过该统计数据可以得知，高校小型实验室每年在利用覆铜制作电路的同时每年产出氧化铜滤渣的净价值为：<br>            (1÷0.015)×2.21×0.592×309×5×0.4×52=28.02 万元      （5.2-1）<br>（2）市场优势。<br>表5装置成本核算</p>
-<pre><code>    亚克力    木材    质子膜    阀门    电路    树脂    管道    其余零件
-    单价    130    200    500    70    100    5    2    /
-    数量    10    1    1    2    1    1    5    /
-    总价    1300    200    500    140    100    1    10    200
-</code></pre><p>现有功能齐全蚀刻机销售大多超过4000元，本产品演示模型制作成本约2455元，仅约为现有蚀刻机售价的61%，量产成本可进一步降低，在价格上具有一定的市场优势。</p>
+<h2 id="5-1-减排效益分析"><a href="#5-1-减排效益分析" class="headerlink" title="5.1 减排效益分析"></a>5.1 减排效益分析</h2><p>1m2的标准覆铜板有铜305g，一般约60%的铜参与反应，即腐蚀掉183g的铜。蚀刻废液的铜离子平均浓度为2370mg/L，单个实验室每周可减少含铜废水约77.2L。若湖北高校40%的实验室采用了本新型腐蚀机，则每年（52周）可减少高浓度含铜污水排放：<center><br>                    $77.2×52×309×5×0.4=2.48×105L    $              （5.1-1）<br>  <center><br>根据《中华人民共和国污水排放标准》（GB 8978-2015）的规定，三级污水排放标准中含铜离子应小于2mg/L, 认定含铜离子≥2mg/L为被污染水源，据质量守恒原理与扩散原理[6]<br>可知，在足够时间下，减少了因直接排放而污染的水：<center><br>                     $2370mg/L×2.48×105L÷2mg/L=2.938×108L    $          (5.1-2)<br>    </center></center></center></p>
+<h2 id="5-2-经济效益分析"><a href="#5-2-经济效益分析" class="headerlink" title="5.2 经济效益分析"></a>5.2 经济效益分析</h2><p>（1）电路板蚀刻后，直接排放的废液含高浓度铜离子，这些铜具有很高的回收价值。蚀刻机腐蚀一块规格为15cm×10cm（0.015m2）厚1oz的单面铜板（约有4.575g铜）可回收约1.78g铜。1.78g的铜产生约2.21g氧化铜，产生的氧化铜具有极好的杀菌与催化作用，且纯度较高。由于产生1g氧化铜需1g的氢氧化钠，根据氧化铜（0.69RMB/g）和氢氧化钠（0.098 RMB/g）的市场价值可知，回收1g氧化铜的净收入为0.592RMB。折合成1m2通过该统计数据可以得知，高校小型实验室每年在利用覆铜制作电路的同时每年产出氧化铜滤渣的净价值为：<center><br>            $(1÷0.015)×2.21×0.592×309×5×0.4×52=28.02$ 万元      （5.2-1）<br>    <center><br>（2）市场优势。<br>    <center><br>表5装置成本核算</center></center></center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">亚克力</th>
+<th style="text-align:center">木材</th>
+<th style="text-align:center">质子膜</th>
+<th style="text-align:center">阀门</th>
+<th style="text-align:center">电路</th>
+<th style="text-align:center">树脂</th>
+<th style="text-align:center">管道</th>
+<th>其余零件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">单价</td>
+<td style="text-align:center">130</td>
+<td style="text-align:center">200</td>
+<td style="text-align:center">500</td>
+<td style="text-align:center">70</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">2</td>
+<td>/    </td>
+</tr>
+<tr>
+<td style="text-align:center">数量</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">5</td>
+<td>/</td>
+</tr>
+<tr>
+<td style="text-align:center">总价</td>
+<td style="text-align:center">1300</td>
+<td style="text-align:center">200</td>
+<td style="text-align:center">500</td>
+<td style="text-align:center">140</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">10</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+<p> <br>现有功能齐全蚀刻机销售大多超过4000元，本产品演示模型制作成本约2455元，仅约为现有蚀刻机售价的61%，量产成本可进一步降低，在价格上具有一定的市场优势。</p>
 <h1 id="6-创新点及应用前景"><a href="#6-创新点及应用前景" class="headerlink" title="6. 创新点及应用前景"></a>6. 创新点及应用前景</h1><h2 id="6-1-创新点"><a href="#6-1-创新点" class="headerlink" title="6.1 创新点"></a>6.1 创新点</h2><p>（1）利用化学沉淀法结合阳离子交换树脂或三维石墨烯构成除污系统，可实现对蚀刻废液的就地处理，直接排放。<br>（2）增加能量收集模块将腐蚀反应中产生的化学能转为电能并收集。<br>（3）针对存储反应等设计了新型结构，达到节能、防腐、防挥发目的，使用方便，安全性高。</p>
 <h2 id="6-2-应用前景"><a href="#6-2-应用前景" class="headerlink" title="6.2 应用前景"></a>6.2 应用前景</h2><p>近年来工业上相继颁布增产不增污等政策指令及《清洁生产标准 印制电路板制造业》相关文献，这表明环境问题逐步进入人们的视野。电路板经蚀刻后，产生污染废液若处理不当会造成严重污染，且蚀刻液中铜具有很高的回收价值。本蚀刻机可以就地处理高浓度的含铜废液使其能达到我国《污水综合排放标准》(GB8978-1996)的一级标准。借助本产品可将废液中的铜回收利用作为生产杀菌剂或催化剂的原材料，变废为宝。<br>此外，本产品可弥补市场空缺的同时，与以前产品相比，功耗降低至930mW，可实现全自动控制，操作简单。且本产品的成本仅约为目前蚀刻机售价的61%。综上所述，本产品具有较好的应用前景。</p>
 <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><pre><code>[1] 中国印制电路行业协会.中国印制电路行业协会工作专辑[R].上海：中国印制电路行业协会，2010.
