@@ -65,25 +65,24 @@
 	
 <link rel="stylesheet" href="/css/prism-xonokai.css" type="text/css"></head>
     
-		<body class="is-loading">
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_dark.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in overlay">
+    <div id="wrapper" class="fade-in">
         <!-- Intro 头部显示 s -->
-                <div id="intro">
-            <h1> Welcome<br>
-                        PoetryScience </h1>
-            <p> To have a nice day! <br> HuiXin's notes
-            </p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">PoetryScience</a>
 </header>
-        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special">
             <ul class="menu links">
@@ -162,83 +161,101 @@
                     
 			</ul>
 </nav>
-        <!-- Nav 导航条 end -->
-        <!-- Main 主要部分 start -->
-        
-        <!-- 文章列表   s -->
-        <div id="main" style="background-color: transparent; padding:0;">
-        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
-            <div class="link_row">
-                <!-- 文章sample  s-->
 
-                
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                       <a href="/2019/04/07/C++ProgramingString/">
-                        <div class="page_title" style="background-image: url(http://up.36992.com/pic/21/cc/8f/21cc8faa05699e4ffa9ffbf369c21f1c.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <h2 class="page_title_text"> 网易雷火2019实习笔试编程题-字符串特定格式拼接输出 </h2>
-                            <!--段落-->
-                        </div>
-                        </a>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2019-04-07</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
-                                <a class="post_category-link" href="/categories/学习笔记/">学习笔记</a></a>
-                            </h6>
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-            
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                       <a href="/2019/04/03/C++ProgramingCouponAndTolls/">
-                        <div class="page_title" style="background-image: url(http://up.36992.com/pic/21/cc/8f/21cc8faa05699e4ffa9ffbf369c21f1c.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <h2 class="page_title_text"> 百度笔试编程题-加油站和代金券 </h2>
-                            <!--段落-->
-                        </div>
-                        </a>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2019-04-03</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
-                                <a class="post_category-link" href="/categories/学习笔记/">学习笔记</a></a>
-                            </h6>
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-            
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(http://up.36992.com/pic/21/cc/8f/21cc8faa05699e4ffa9ffbf369c21f1c.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>网易雷火2019实习笔试编程题-字符串特定格式拼接输出</h2></a>
             </div>
-        </section>
-        </div>
-        <!-- 文章列表   end -->
-        <!-- Main 主要部分 end -->
-        <!-- footer  页码 start-->
-        <footer style="text-align: center; padding-top: 2em;">
-  
-</footer>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="编程题描述"><a href="#编程题描述" class="headerlink" title="编程题描述"></a>编程题描述</h2><p>给定两个长度相同的字符库数组AB,对A字符串数组进行排序。数组长度不多于1000。排序规则根据字符串按各字母顺序进行升序。最后输出A[i]=&amp;A[i+1]B[i]格式的字符串。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><p>输入两个个字符串数组,针对输入相同的字符串提示“1mut<br>error</p>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><p>按照要求排序后拼接的字符串   </p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h2><pre><code>ock ame word
+HYXxxS jack this
+</code></pre><h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h2><pre><code>ame=HYXxxS&amp;ock=jack&amp;word=this
+</code></pre><h2 id="C-程序"><a href="#C-程序" class="headerlink" title="C++程序"></a>C++程序</h2><pre><code>#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cmath&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstring&gt;
+#include &lt;queue&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt; 
+using namespace std;
 
-        <!-- footer  页码 end-->
+int main()
+{
+    vector&lt;string&gt; A, B;
+    string str;
+    char ch;
+    int flag = 0;
+    while (cin &gt;&gt; str) {
+            if (find(A.begin(), A.end(), str) != A.end())  
+        {
+             flag=1;
+        }
+        else flag=0;
+        A.push_back(str);
+        if ((ch = getchar()) == &#39;\n&#39;)
+            break;
+
+
+    }
+        if ( flag==1)  //如果找到，输出报错 
+        {
+            cout &lt;&lt; &quot;input error&quot;&lt;&lt;endl;
+            return 0;
+        }
+
+    int lengthA = A.size();
+        while (cin &gt;&gt; str) {
+            B.push_back(str);
+            if ((ch = getchar()) == &#39;\n&#39;)
+                break;
+        }
+    int lengthB = B.size();
+
+    sort(A.begin(), A.end());
+    sort(B.begin(), B.end());
+    cout &lt;&lt; A[0] &lt;&lt; &quot;=&quot;;
+    for (int i = 1; i &lt; lengthA; i++)
+        cout &lt;&lt; B[i - 1] &lt;&lt; &quot;&amp;&quot; &lt;&lt; A[i] &lt;&lt; &quot;=&quot;;
+    cout &lt;&lt; B[lengthB - 1] &lt;&lt; endl;
+    return   0;
+}
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: true,
+        app_id: 'kz3wsPKNVn8aU9uOSYxwpyPt-gzGzoHsz',
+        app_key: 'z7FfKotHzOxCP8I8grnMlOAM',
+        placeholder: 'Please leave your footprints',
+        pageSize: '10',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -249,11 +266,10 @@
                 <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
-        <!-- Copyright 版权 end -->
     </div>
-    <!-- Wrapper 外包 e-->
-    <!-- Scripts -->
 </body>
+
+
 
  	
 </html>
