@@ -164,68 +164,113 @@
 
         <div id="main">
             <div class="post_page_title_img" style="height: 25rem;background-image: url(http://up.36992.com/pic/21/cc/8f/21cc8faa05699e4ffa9ffbf369c21f1c.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>网易雷火2019实习笔试编程题-字符串特定格式拼接输出</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>京东2019实习笔试编程题-红黑石头搭建石头塔</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h2 id="编程题描述"><a href="#编程题描述" class="headerlink" title="编程题描述"></a>编程题描述</h2><p>给定两个长度相同的字符库数组AB,对A字符串数组进行排序。数组长度不多于1000。排序规则根据字符串按各字母顺序进行升序。最后输出A[i]=&amp;A[i+1]B[i]格式的字符串。</p>
-<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><p>输入两个个字符串数组,针对输入相同的字符串提示”input error”</p>
-<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><p>按照要求排序后拼接的字符串   </p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h2><pre><code>ock ame word
-HYXxxS jack this
-</code></pre><h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h2><pre><code>ame=HYXxxS&amp;ock=jack&amp;word=this
-</code></pre><h2 id="C-程序"><a href="#C-程序" class="headerlink" title="C++程序"></a>C++程序</h2><pre><code>#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
-#include &lt;cmath&gt;
-#include &lt;algorithm&gt;
-#include &lt;cstring&gt;
-#include &lt;queue&gt;
-#include &lt;map&gt;
-#include &lt;string&gt;
-#include &lt;vector&gt; 
+                <h2 id="编程题描述"><a href="#编程题描述" class="headerlink" title="编程题描述"></a>编程题描述</h2><p>有红色和绿色两种颜色的石头，可以用来搭建塔，规定第1层需要1块石头，第i层需要i块石头…求满足最大层数的种类数。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h2><p>输入两个数据，表示红色和绿色石头的个数</p>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h2><p>输出可以组成最大层数的种类数 （输出对1000007取模）</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h2><pre><code>4 6
+2 1
+</code></pre><h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h2><pre><code>2
+1
+</code></pre><h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p>类似于一个变形的背包问题，同时有两个背包。采用递归的方式，每种石头可以放或者不放。</p>
+<h2 id="C-程序"><a href="#C-程序" class="headerlink" title="C++程序"></a>C++程序</h2><pre><code>#include&lt;list&gt;  
+#include&lt;iostream&gt;
+#include&lt;vector&gt;
 using namespace std;
+long long counts = 0;
+const int cx = 10000007;
+int max = 0;
+vector&lt;int&gt;greenValues;
+vector&lt;int&gt;redValues;
+void methods_maxnums(int green, int red, int floor)//第一次递归函数，计算出能够到达的最大的层数
+{
 
+    if (green &lt;= 0 || red &lt;= 0)
+    {
+        if (floor &gt;= max)
+        {
+            max = floor;
+        }
+        else;
+
+        return ;
+    }
+    //结束条件，
+    //先放绿的再看红的
+    if ((green-floor) &gt; 0) {
+
+        greenValues.push_back(floor);      //01背包问题  
+
+        methods_maxnums(green - floor, red, ++floor);   //先放绿色
+
+        greenValues.pop_back();  //拿出绿色，选择红色；
+        floor--;
+    }
+    if ((red - floor) &gt; 0) {
+
+        redValues.push_back(floor);      //01背包问题  
+        methods_maxnums(green, red - floor, ++floor);     //不放,放红的
+    }
+}
+int methods_nums(int green, int red, int floor)//与上个递归函数类似，作用是计算出满足最大层数的种类数
+{
+    if (green &lt;= 0 || red &lt;= 0)
+    {
+        if (floor &gt;= max)
+        {
+            counts++;
+        }
+        else;
+
+        return counts;
+    }
+    //结束条件，
+    //先放绿的再看红的
+    if ((green - floor) &gt; 0) {
+        greenValues.push_back(floor);      //01背包问题  
+
+        methods_nums(green - floor, red, ++floor);   //先放绿色
+
+        greenValues.pop_back();  //拿出绿色，选择红色；
+        floor--;
+    }
+
+    if ((red - floor) &gt; 0) {
+
+        redValues.push_back(floor);      //01背包问题  
+        methods_nums(green, red - floor, ++floor);     //不放,放红的
+    }
+}
 int main()
 {
-    vector&lt;string&gt; A, B;
-    string str;
-    char ch;
-    int flag = 0;
-    while (cin &gt;&gt; str) {
-            if (find(A.begin(), A.end(), str) != A.end())  
-        {
-             flag=1;
-        }
-        else flag=0;
-        A.push_back(str);
-        if ((ch = getchar()) == &#39;\n&#39;)
-            break;
+    int red = 1;
+    int green = 2;
+    int ans = 0;
+    // int count = 0;
+    // int max = 0;
+     cin &gt;&gt; red;  
+     cin &gt;&gt; green;  
+    methods_maxnums(green, red, 1);
+    ans = methods_nums(green, red, 1);
+    //cout &lt;&lt; &quot;maxfloor&quot; &lt;&lt; endl;//调试用输出 计算出最大的层数
+    //cout &lt;&lt; max &lt;&lt; endl;
+    //cout &lt;&lt; &quot;counts&quot; &lt;&lt; endl; //调试用输出 代表输出种类数
+    cout &lt;&lt; counts &lt;&lt; endl;
 
+    //调试用输出，注释掉
+    //cout &lt;&lt; &quot;redValues&quot; &lt;&lt; endl;
+    //for (int i = 0; i &lt; redValues.size(); i++)
+    //    cout &lt;&lt; redValues[i] &lt;&lt; endl;
+    //cout &lt;&lt; &quot;redValues&quot; &lt;&lt; endl;
+    //cout &lt;&lt; redValues.size() &lt;&lt; endl;
 
-    }
-        if ( flag==1)  //如果找到，输出报错 
-        {
-            cout &lt;&lt; &quot;input error&quot;&lt;&lt;endl;
-            return 0;
-        }
-
-    int lengthA = A.size();
-        while (cin &gt;&gt; str) {
-            B.push_back(str);
-            if ((ch = getchar()) == &#39;\n&#39;)
-                break;
-        }
-    int lengthB = B.size();
-
-    sort(A.begin(), A.end());
-    sort(B.begin(), B.end());
-    cout &lt;&lt; A[0] &lt;&lt; &quot;=&quot;;
-    for (int i = 1; i &lt; lengthA; i++)
-        cout &lt;&lt; B[i - 1] &lt;&lt; &quot;&amp;&quot; &lt;&lt; A[i] &lt;&lt; &quot;=&quot;;
-    cout &lt;&lt; B[lengthB - 1] &lt;&lt; endl;
-    return   0;
+    return 0;
 }
-</code></pre>
+</code></pre><p>输出如下图所示，为了方便看，我将代码改成for循环形式，注意输出要取模，这里没有。<br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1555169080/Coding/%EF%BC%92.png" alt="1"><br>这是我找到的几组输入对应输出。</p>
+
             </div>
 
             <!-- Post Comments -->
