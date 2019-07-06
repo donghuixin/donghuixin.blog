@@ -174,21 +174,21 @@
 <h1 id="1-背向散射通信技术简介"><a href="#1-背向散射通信技术简介" class="headerlink" title="1 背向散射通信技术简介"></a>1 背向散射通信技术简介</h1><p>背向散射通信技术主要是通过弹射环境中的电磁波实现通信。由于其通过改变天线的接口阻抗来实现对电磁波弹射与吸收，接收端就可以通过接收到增强的载波和衰减的载波来判断背向散射天线的工作状态，从而了解到其传递的信息。<img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775671/ASK.png" alt="ASK"></p>
 <p>​                                                          图1 实际测得背向散射天线信号示意图</p>
 <p>关于背向散射天线，从2013年Vicent.Liu所做的Ambient backscatter开始有不少相关的研究工作，特别地，在这个方向的相关的工作中，华盛顿大学一直处于领先位置，从一开始的各种原型开始到batteryfree-cellPhone、batteryfree-camera和各类物联网的传感器应用场景。其独特的通信方式使得其在物联网方向具有较大的潜力。</p>
-<p>​                          <img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775671/batteryfree_phone.png" alt="batteryfreephone"> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1528776001/batteryfree_camera.png" alt="batteryfree_camera"> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775672/3dprint.png" alt=""></p>
-<p>​       图1.1 batteryfree_phone、batteryfree_camera和一些batteryfree的物联网传感器件均采用了背向散射的通信技术</p>
+<p>​<center><br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775671/batteryfree_phone.png" alt="batteryfreephone"> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1528776001/batteryfree_camera.png" alt="batteryfree_camera"> <img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775672/3dprint.png" alt=""></center></p>
+<p>​       图1.1 batteryfree_phone、batteryfree_camera和一些batteryfree的物联网传感器件均采用了背向散射的通信技术<br></p>
 <p>本文主要对之前的一些文章做一些总结，主要通过背向散射天线的调制方式来切入。<em>特别感谢黄倩怡学姐对我相关疑惑问题的解释，并且结尾附上她整理的相关论文的名称。</em></p>
 <h1 id="2-ASK调制方式下的背向散射通信技术"><a href="#2-ASK调制方式下的背向散射通信技术" class="headerlink" title="2 ASK调制方式下的背向散射通信技术"></a>2 ASK调制方式下的背向散射通信技术</h1><p>ASK是最初采用的调制方式，也是最容易想到的。13年的ambient backscatter用的就是这种方式。其通信模式也比较简单，解调相应的包络就可以实现通信了。就不对这种方式进行较为详细的介绍了，主要说一说涉及到的一个移频（Frenquence Shift）的trick。</p>
 <p>以MOXcatter为例就做了一个频率移动的操作，将频带移动到中心频率两端20MHz的地方，避开传统的信息的传递，实现较为有效的通信。示意图如下所示:</p>
-<p><img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775671/31.png" alt=""></p>
-<p>​                                                           图2 频率搬移及对应电路逻辑</p>
+<center><br><br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775671/31.png" alt="1"><br><br>​                                                           图2 频率搬移及对应电路逻辑<br></center>
+
 <p>通过一个固定的时钟产生同频率不同相位的信号对背向散射天线的开关进心控制，数据流控制多路选择器的选择端口。这种频率搬移的方式相当于再对tag的弹射信号做了一次调制或者说做了中频，但确实非常有效。</p>
 <h1 id="3-FSK下的背向散射通信技术的实现"><a href="#3-FSK下的背向散射通信技术的实现" class="headerlink" title="3 FSK下的背向散射通信技术的实现"></a>3 FSK下的背向散射通信技术的实现</h1><p>这里所说的所谓的fsk也就是一个小把戏，其对应的调制方式也就类似于用两个频率对其进行移频的操作。由于其移动的频率不同，接收端可以根据这种频率的变化来进行译码。调制的方式通过多路开关来控制两路震荡信号实现对电磁波的弹射通信。其电路实现框图如下所示：</p>
 <p><img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775672/3FSK.png" alt="FSK"></p>
 <p>​                                                                          图3 FSK调制的实现电路</p>
 <p>这种调制方式与传统意义上的FSK调制还是有一些区别的，这个只是改变了中频的频率，如果可以用这种方式进行调制，前面的ASK的调制方式也可以理解成PSK了，因为改变了中频的相位。</p>
 <h1 id="4-PSK下的背向散射的实现"><a href="#4-PSK下的背向散射的实现" class="headerlink" title="4 PSK下的背向散射的实现"></a>4 PSK下的背向散射的实现</h1><p>MobiCom14年的Full-duplex Backscatter就较好得解释了一种PSK的调制方式，这种调制方式也较为有趣，并且也符合传统的PSK调制方式的理解，其改变了载波的相位实现了PSK的调制。其基本原理与创新之处如下图所示。</p>
-<p><img src="https://res.cloudinary.com/donghuixin/image/upload/v1528775671/5.png" alt="smith"></p>
-<p>​                                                                 图4 史密斯圆图</p>
+<center><br><img src="https://res.cloudinary.com/donghuixin/image/upload/v1562388690/smith.png" alt="smith"><br><br>​                                                                 图4 史密斯圆图SS<br></center>
+
 <p>通用的backscatter tag通过调整开关使得其阻抗匹配在S1与S2点上，这样实现对电磁波能量的有效的弹射。而本文中的背向散射天线匹配的点在S3与S4点上，这样在反射的过程中会带来相位的变化，其在史密斯圆图上对应了j0.5和j-0.5的点，这样在开关的不同状态它对于电磁波信号的相位改变不一样。通过这种方式实现了PSK的调制。</p>
 <p>这篇文章也着重分析了PSK的基本的原理，介绍了关于PSK实现的基本方式以及阻抗匹配的一些基本原理。</p>
 <p>​                            $$\Gamma=\dfrac{Za -Zl}{Za+Zl} $$  </p>
