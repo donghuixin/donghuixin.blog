@@ -65,25 +65,24 @@
 	
 <link rel="stylesheet" href="/css/prism-xonokai.css" type="text/css"></head>
     
-		<body class="is-loading">
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_dark.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in overlay">
+    <div id="wrapper" class="fade-in">
         <!-- Intro 头部显示 s -->
-                <div id="intro">
-            <h1> Welcome<br>
-                        PoetryScience </h1>
-            <p> To have a nice day! <br> Stay awake, keep the pain
-            </p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">PoetryScience</a>
 </header>
-        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special">
             <ul class="menu links">
@@ -162,83 +161,45 @@
                     
 			</ul>
 </nav>
-        <!-- Nav 导航条 end -->
-        <!-- Main 主要部分 start -->
-        
-        <!-- 文章列表   s -->
-        <div id="main" style="background-color: transparent; padding:0;">
-        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
-            <div class="link_row">
-                <!-- 文章sample  s-->
 
-                
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                       <a href="/2018/05/05/文献阅读-17Ganranteeing-spoofing-resilient-in-MultirobotSYS/">
-                        <div class="page_title" style="background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <h2 class="page_title_text"> 17Ganranteeing-spoofing resilient in MultirobotSYS </h2>
-                            <!--段落-->
-                        </div>
-                        </a>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2018-05-05</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
-                                <a class="post_category-link" href="/categories/文献阅读/">文献阅读</a></a>
-                            </h6>
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-            
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                       <a href="/2018/04/24/文献阅读-17IEEECOMPUTER-Toward-Centimeter-Scale-Human-Activity-Sensing-with-Wi-Fi-Signals/">
-                        <div class="page_title" style="background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <h2 class="page_title_text"> Toward Centimeter-Scale Human Activity Sensing with Wi-Fi Signals </h2>
-                            <!--段落-->
-                        </div>
-                        </a>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2018-04-24</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
-                                <a class="post_category-link" href="/categories/文献阅读/">文献阅读</a></a>
-                            </h6>
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-            
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://free-hd-wallpapers.info/wp-content/uploads/2018/01/download-wallpaper-art-426730-art-naruto-pain-paren-pirsing-ruka-bandana-ryzhij-1680x1050-www.gde-fon.com.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Stay awake,keep the pain</h2></a>
             </div>
-        </section>
-        </div>
-        <!-- 文章列表   end -->
-        <!-- Main 主要部分 end -->
-        <!-- footer  页码 start-->
-        <footer style="text-align: center; padding-top: 2em;">
-  
-</footer>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>明明非常忙碌，有很多事情需要去做，但是时不时的觉得自己很无聊，想去找老朋友们多说说话，说话时又觉得别人可能在忙，我这样会打扰别人可能会显得自己更无聊了，不想去打扰到别人。陷入被动式话痨的死亡循环之中。<br><br>觉得许多时候我是不够清醒或者容易忘记疼痛才会时不时的后悔之前的一些事情。so，希望自己能够记住吧。</p>
 
-        <!-- footer  页码 end-->
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: true,
+        app_id: 'kz3wsPKNVn8aU9uOSYxwpyPt-gzGzoHsz',
+        app_key: 'z7FfKotHzOxCP8I8grnMlOAM',
+        placeholder: 'Please leave your footprints',
+        pageSize: '10',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -249,11 +210,10 @@
                 <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
-        <!-- Copyright 版权 end -->
     </div>
-    <!-- Wrapper 外包 e-->
-    <!-- Scripts -->
 </body>
+
+
 
  	
 </html>
